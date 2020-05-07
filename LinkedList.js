@@ -20,6 +20,8 @@ class Node {
 // 12. detectLoop();
 // 13. findMid();
 // 14. removeDublicates();
+// 15. union(list1, list2);
+// 16. intersection(list1, list2);
 
 class LinkedList {
     constructor() {
@@ -267,4 +269,54 @@ class LinkedList {
             }
         }
     }
+}
+
+// helper methods
+const union = (list1, list2) => {
+    // takes two linked lists and returns their union
+
+    let result = new LinkedList();
+
+    let t1 = list1.head;
+
+    while (t1 != null) {
+        result.insertAtTail(t1.data);
+        t1 = t1.nextNode;
+    }
+
+    let t2 = list2.head;
+
+    while (t2 != null) {
+        result.insertAtTail(t2.data);
+        t2 = t2.nextNode;
+    }
+
+    result.removeDublicates();
+
+    return result;
+}
+
+const intersection = (list1, list2) => {
+    // returns all the elements that are common between two linked lists
+
+    let result = new LinkedList();
+    let t1 = list1.head;
+
+    while (t1 != null) {
+        let t2 = list2.head;
+
+        while (t2 != null) {
+            if (t1.data == t2.data) {
+                result.insertAtTail(t2.data);
+            }
+
+            t2 = t2.nextNode;
+        }
+
+        t1 = t1.nextNode;
+    }
+
+    result.removeDublicates();
+
+    return result;
 }
