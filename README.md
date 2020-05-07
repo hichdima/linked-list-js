@@ -47,6 +47,12 @@ If length is odd returns (length / 2) + 1 node.
 1. removeDublicates();
 Removes any node that is a dublicate of already exisiting one.
 
+1. union(list1, list2);
+Given two lists A and B; the union is the list that contains elements or objects that belong to either A, or to B, or to both.
+
+1. intersection(list1, list2);
+Given two lists A and B, the intersection is a list, which contains all the elements that are common to both the sets.
+
 ### Example of how to create a linked list:
 
 ```javascript
