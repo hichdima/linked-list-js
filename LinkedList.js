@@ -22,6 +22,7 @@ class Node {
 // 14. removeDublicates();
 // 15. union(list1, list2);
 // 16. intersection(list1, list2);
+// 17. findNthFromTail(n);
 
 class LinkedList {
     constructor() {
@@ -268,6 +269,28 @@ class LinkedList {
                 t = t.nextNode;
             }
         }
+    }
+
+    findNthFromTail(n) {
+        let i = 0;
+        let t1 = this.head;
+        let t2 = this.head;
+
+        while (i < n) {
+            if (t2 == null) {
+                return "Out of bound";
+            }
+
+            t2 = t2.nextNode;
+            i++;
+        }
+
+        while (t2 != null) {
+            t1 = t1.nextNode;
+            t2 = t2.nextNode;
+        }
+
+        return t1.data;
     }
 }
 

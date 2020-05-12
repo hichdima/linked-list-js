@@ -53,6 +53,9 @@ Given two lists A and B; the union is the list that contains elements or objects
 1. intersection(list1, list2);
 Given two lists A and B, the intersection is a list, which contains all the elements that are common to both the sets.
 
+1. findNthFromTail(n);
+Returns value of Nth node from the tail
+
 ### Example of how to create a linked list:
 
 ```javascript
